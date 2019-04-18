@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Social Logos";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Social Logos.ttf") format("ttf"), url("../fonts/Social Logos.woff") format("woff");
+}
+
+section .under-heading-text {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.introducion p, .navigation {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px/30px 'Open Sans', sans-serif;
+  color: #000;
+}
+
+header {
+  text-align: center;
+}
+
+.introducion {
+  background: url(../images/top-bg-shadow.jpg) no-repeat center;
+  color: #f1f2f1;
+  padding: 440px 0 270px;
+}
+
+.introducion .welcome {
+  font: 108px/108px 'Signika', sans-serif;
+  margin-bottom: 90px;
+}
+
+.introducion h4 {
+  font: 700 48px/48px 'Signika', sans-serif;
+  margin-bottom: 20px;
+}
+
+.introducion p {
+  font-family: 'Signika', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.top-nav {
+  background: #00a388;
+  padding: 25px 0;
+}
+
+.navigation {
+  font-family: 'Signika', sans-serif;
+}
+
+.navigation li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+  position: relative;
+}
+
+.navigation li:first-child {
+  padding-left: 0;
+}
+
+.navigation li:last-child {
+  padding-right: 0;
+}
+
+.navigation li::after {
+  position: absolute;
+  content: "//";
+  right: -10px;
+  color: #f1f2f1;
+}
+
+.navigation li:last-child::after {
+  content: none;
+}
+
+.navigation a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f1f2f1;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+
+.navigation a:hover {
+  opacity: .8;
+}
+
+.container {
+  padding: 0 13%;
+}
+
+section .section-heading {
+  font-family: "Signika", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #140e1d;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 55px;
+  position: relative;
+}
+
+section .section-heading::after {
+  content: "...";
+  position: absolute;
+  left: 48.5%;
+  top: 30px;
+}
+
+section .under-heading-text {
+  font-family: "Signika", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about,
+.portfolio {
+  background: #ecfffc;
+}
+
+.about {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.about-info {
+  padding: 0 20px;
+}
+
+.about-info p {
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 110px;
+          column-gap: 110px;
+  text-align: justify;
+  letter-spacing: .5px;
+}
+
+.bottom-nav {
+  background: #02c5a5;
+  padding: 35px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.bottom-nav .navigation {
+  font-size: 14px;
+}
+
+.bottom-nav .navigation li::after {
+  right: -7px;
+}
+
+p.logos {
+  font-family: "Social Logos";
+  font-size: 18px;
+}
+/*# sourceMappingURL=style.css.map */

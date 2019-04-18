@@ -1,0 +1,182 @@
+@import "fonts";
+
+$main-green: #00a388;
+$secondary-green: #02c5a5;
+$background-green: #ecfffc;
+$hover-green: #f5fffd;
+
+$heading-color: #140e1d;
+
+%under-heading {
+  font-size: 16px;
+  line-height: 20px;
+}
+%under-heading-dashed {
+  font-size: 18px;
+  line-height: 20px;
+}
+@mixin link-transition() {
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+
+* {
+  margin: 0; 
+  padding: 0;
+}
+
+body {
+  font: 14px/30px 'Open Sans', sans-serif;
+  color: #000;
+}
+
+header {
+  text-align: center;
+}
+.introducion {
+  background: url(../images/top-bg-shadow.jpg) no-repeat center;
+  color: #f1f2f1;
+  padding: 440px 0 270px;
+
+  .welcome {
+    font: 108px/108px 'Signika', sans-serif;
+    margin-bottom: 90px;
+  }
+
+  h4 {
+    font: 700 48px/48px 'Signika', sans-serif;
+    margin-bottom: 20px;
+  }
+
+  p {
+    @extend %under-heading-dashed;
+    font: {
+      family: 'Signika', sans-serif;
+      weight: 700;
+    } 
+    text-transform: uppercase;
+    
+  }
+}
+
+.top-nav {
+  background: $main-green;
+  padding: 25px 0;
+
+  
+}
+
+.navigation {
+  font-family: 'Signika', sans-serif;
+  @extend %under-heading-dashed;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    &::after {
+      position: absolute;
+      content: "//";
+      right: -10px;
+      color: #f1f2f1;
+    }
+    &:last-child::after{
+      content: none;
+    }
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f1f2f1;
+    @include link-transition();
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+  
+}
+
+.container {
+  padding: 0 13%;
+}
+section {
+  .section-heading {
+    font: {
+      family: "Signika", sans-serif;
+      size: 48px;
+      weight: 600;
+    }
+    color: $heading-color;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 55px;
+    position: relative;
+  
+    &::after {
+      content: "...";
+      position: absolute;
+      left: 48.5%;
+      top: 30px;
+    }
+  }
+
+  .under-heading-text {
+    @extend %under-heading;
+    font-family: "Signika", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;;
+  }
+} 
+.about,
+.portfolio {
+  background: $background-green;
+}
+.about {
+  padding-top: 90px;
+  padding-bottom: 90px;
+} 
+
+.about-info {
+  padding: 0 20px;
+
+
+  p {
+    column-count: 2;
+    column-gap: 110px;
+    text-align: justify;
+    letter-spacing: .5px;
+  }
+}
+.bottom-nav {
+  background: $secondary-green;
+  padding: 35px 0;
+  text-align: center;
+  font-size: 14px;
+
+  .navigation {
+    font-size: 14px;
+
+    li::after {
+      right: -7px;
+    }
+  }
+}
+
+p.logos {
+  font-family: "Social Logos";
+  font-size: 18px;
+}
