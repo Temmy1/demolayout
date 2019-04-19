@@ -1,8 +1,10 @@
 @font-face {
   font-family: "Social Logos";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Social Logos.ttf") format("ttf"),
-       url("../fonts/Social Logos.woff") format("woff");
+  src: url('../fonts/SocialLogos.eot') format('embedded-opentype'),
+        url('../fonts/SocialLogos.woff2') format('woff2'),
+         url('../fonts/SocialLogos.woff') format('woff'),
+         url('../fonts/SocialLogos.ttf') format('truetype'),
+         url('../fonts/SocialLogos.svg#SocialLogos') format('svg');
+
 }
 

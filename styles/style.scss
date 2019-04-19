@@ -33,6 +33,7 @@ body {
   color: #000;
 }
 
+/* Header */
 header {
   text-align: center;
 }
@@ -108,6 +109,8 @@ header {
   
 }
 
+
+/* Main Content */
 .container {
   padding: 0 13%;
 }
@@ -145,6 +148,8 @@ section {
 .portfolio {
   background: $background-green;
 }
+
+/* -- About-block --*/
 .about {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -152,15 +157,134 @@ section {
 
 .about-info {
   padding: 0 20px;
+  margin-bottom: 100px;;
 
 
   p {
     column-count: 2;
     column-gap: 110px;
+    column-fill: balance;
     text-align: justify;
     letter-spacing: .5px;
   }
 }
+
+.our-team {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+
+  .member {
+    flex: 0 1 270px;
+
+    img {
+      vertical-align: middle;
+      max-width: 100%;
+    }
+  }
+
+  .base-info {
+    text-align: center;
+    padding: 10px 0;
+    font-family: "Signika", sans-serif;
+    background: $main-green;
+
+    .name {
+      @extend %under-heading-dashed;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "//";
+      }
+      &::before {
+        left: -28px;
+      }
+      &::after {
+        right: -28px;
+      }
+
+    }
+    .position {
+      @extend %under-heading;
+    }
+  }
+
+  .more-info {
+    font-size: 12px;
+    line-height: 21px;
+    color: #fff;
+    background: $main-green;
+    padding: 10px 20px 20px;
+    text-align: justify;
+
+    .logos {
+      font-family: "Social Logos";
+      text-align: center;
+      font-size: 36px;
+      line-height: 21px;
+      margin-top: 30px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        @include link-transition();
+      }
+    }
+  }
+}
+
+
+/* -- Portfolio -- */
+
+.navigation.section-nav {
+  text-align: center;
+  // margin-bottom: 80px;
+  
+  li::after {
+    color: #000;
+  }
+  a {
+    color: #000;
+  }
+}
+
+.gallery {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .portfolio-item {
+    flex: 0 1 25%;
+  }
+}
+.portfolio-item {
+  position: relative;
+
+  img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+  }
+  .category-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 163, 136, .7);
+  }
+}
+
+/* Footer */
 .bottom-nav {
   background: $secondary-green;
   padding: 35px 0;
@@ -176,7 +300,3 @@ section {
   }
 }
 
-p.logos {
-  font-family: "Social Logos";
-  font-size: 18px;
-}

@@ -1,16 +1,14 @@
 @font-face {
   font-family: "Social Logos";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Social Logos.ttf") format("ttf"), url("../fonts/Social Logos.woff") format("woff");
+  src: url("../fonts/SocialLogos.eot") format("embedded-opentype"), url("../fonts/SocialLogos.woff2") format("woff2"), url("../fonts/SocialLogos.woff") format("woff"), url("../fonts/SocialLogos.ttf") format("truetype"), url("../fonts/SocialLogos.svg#SocialLogos") format("svg");
 }
 
-section .under-heading-text {
+section .under-heading-text, .our-team .base-info .position {
   font-size: 16px;
   line-height: 20px;
 }
 
-.introducion p, .navigation {
+.introducion p, .navigation, .our-team .base-info .name {
   font-size: 18px;
   line-height: 20px;
 }
@@ -25,6 +23,7 @@ body {
   color: #000;
 }
 
+/* Header */
 header {
   text-align: center;
 }
@@ -101,6 +100,7 @@ header {
   opacity: .8;
 }
 
+/* Main Content */
 .container {
   padding: 0 13%;
 }
@@ -136,6 +136,7 @@ section .under-heading-text {
   background: #ecfffc;
 }
 
+/* -- About-block --*/
 .about {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -143,6 +144,7 @@ section .under-heading-text {
 
 .about-info {
   padding: 0 20px;
+  margin-bottom: 100px;
 }
 
 .about-info p {
@@ -150,10 +152,145 @@ section .under-heading-text {
           column-count: 2;
   -webkit-column-gap: 110px;
           column-gap: 110px;
+  -webkit-column-fill: balance;
+          column-fill: balance;
   text-align: justify;
   letter-spacing: .5px;
 }
 
+.our-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.our-team .member {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 270px;
+          flex: 0 1 270px;
+}
+
+.our-team .member img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.our-team .base-info {
+  text-align: center;
+  padding: 10px 0;
+  font-family: "Signika", sans-serif;
+  background: #00a388;
+}
+
+.our-team .base-info .name {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.our-team .base-info .name::before, .our-team .base-info .name::after {
+  position: absolute;
+  content: "//";
+}
+
+.our-team .base-info .name::before {
+  left: -28px;
+}
+
+.our-team .base-info .name::after {
+  right: -28px;
+}
+
+.our-team .more-info {
+  font-size: 12px;
+  line-height: 21px;
+  color: #fff;
+  background: #00a388;
+  padding: 10px 20px 20px;
+  text-align: justify;
+}
+
+.our-team .more-info .logos {
+  font-family: "Social Logos";
+  text-align: center;
+  font-size: 36px;
+  line-height: 21px;
+  margin-top: 30px;
+}
+
+.our-team .more-info .logos a {
+  color: #fff;
+  text-decoration: none;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+
+/* -- Portfolio -- */
+.navigation.section-nav {
+  text-align: center;
+}
+
+.navigation.section-nav li::after {
+  color: #000;
+}
+
+.navigation.section-nav a {
+  color: #000;
+}
+
+.gallery {
+  padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gallery .portfolio-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+}
+
+.portfolio-item {
+  position: relative;
+}
+
+.portfolio-item img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.portfolio-item .category-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 163, 136, 0.7);
+}
+
+/* Footer */
 .bottom-nav {
   background: #02c5a5;
   padding: 35px 0;
@@ -167,10 +304,5 @@ section .under-heading-text {
 
 .bottom-nav .navigation li::after {
   right: -7px;
-}
-
-p.logos {
-  font-family: "Social Logos";
-  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */
