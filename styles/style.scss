@@ -267,6 +267,7 @@ section {
 }
 .portfolio-item {
   position: relative;
+  @include link-transition();
 
   img {
     vertical-align: middle;
@@ -281,6 +282,58 @@ section {
     height: 100%;
     text-align: center;
     background: rgba(0, 163, 136, .7);
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+
+    .work-name,
+    .work-category {
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+    .work-name {
+      font: {
+        family: "Signika", sans-serif;
+        size: 30px;
+        weight: 700;
+      }
+      margin-bottom: 25px;
+    }
+    .work-category {
+      font: {
+        size: 18px;
+        weight: 600;
+      }
+      margin-bottom: 15px;
+    }
+  }
+
+  &:hover {
+    .category-wrap {
+      display: flex;
+    }
+  }
+}
+
+/* -- Sevices -- */
+
+
+.services {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+.our-advantages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+
+  .advantage-item {
+    flex: 0 1 47%;
   }
 }
 

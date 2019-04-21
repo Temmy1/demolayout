@@ -272,6 +272,11 @@ section .under-heading-text {
 
 .portfolio-item {
   position: relative;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
 }
 
 .portfolio-item img {
@@ -288,6 +293,70 @@ section .under-heading-text {
   height: 100%;
   text-align: center;
   background: rgba(0, 163, 136, 0.7);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+.portfolio-item .category-wrap .work-name,
+.portfolio-item .category-wrap .work-category {
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.portfolio-item .category-wrap .work-name {
+  font-family: "Signika", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.portfolio-item .category-wrap .work-category {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.portfolio-item:hover .category-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* -- Sevices -- */
+.services {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.our-advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.our-advantages .advantage-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 47%;
+          flex: 0 1 47%;
 }
 
 /* Footer */
