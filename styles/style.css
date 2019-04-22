@@ -335,7 +335,7 @@ section .under-heading-text {
 /* -- Sevices -- */
 .services {
   padding-top: 110px;
-  padding-bottom: 110px;
+  padding-bottom: 50px;
 }
 
 .our-advantages {
@@ -357,6 +357,142 @@ section .under-heading-text {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 47%;
           flex: 0 1 47%;
+  background: #fff;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  margin-bottom: 60px;
+}
+
+.our-advantages .advantage-item:hover {
+  background: #f5fffd;
+}
+
+.our-advantages .advantage-item:hover .read-more-wrap {
+  visibility: visible;
+}
+
+.our-advantages .advantage-item .icon-container {
+  background: #00a388;
+  width: 112px;
+  height: 112px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.our-advantages .advantage-item .icon-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.our-advantages .advantage-item .advantage-name,
+.our-advantages .advantage-item .read-more {
+  font-family: "Signika", sans-serif;
+  line-height: 1;
+  letter-spacing: .5px;
+  color: #140e1d;
+  text-transform: capitalize;
+}
+
+.our-advantages .advantage-item .advantage-name {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.our-advantages .advantage-item .description {
+  letter-spacing: .5px;
+  color: #333;
+  padding: 0 5px;
+}
+
+.our-advantages .advantage-item .read-more-wrap {
+  text-align: right;
+  padding-right: 5px;
+  visibility: hidden;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+
+.our-advantages .advantage-item .read-more {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* -- Blog -- */
+.blog {
+  padding-top: 110px;
+  padding-bottom: 215px;
+  background: #ecfffc;
+}
+
+.posts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.posts-wrapper .post {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 23%;
+          flex: 0 1 23%;
+  padding-bottom: 30px;
+}
+
+.posts-wrapper .post img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.posts-wrapper .post-description {
+  background: #fff;
+  padding: 30px;
+  height: 295px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*????*/
+}
+
+.posts-wrapper .post-description .theme {
+  font-size: 14px;
+  line-height: 21px;
+  color: #00a388;
+}
+
+.posts-wrapper .post-description h4 {
+  font-family: "Signika", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 15px 0;
+}
+
+.posts-wrapper .post-description .post-text {
+  line-height: 24px;
+}
+
+/* -- Map -- */
+/* -- Contact -- */
+.inputs input {
+  display: block;
 }
 
 /* Footer */
