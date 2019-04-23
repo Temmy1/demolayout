@@ -470,4 +470,23 @@ section {
     }
   }
 }
+.main-footer {
+  background: $main-green;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.addresses {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.social {
 
+}
