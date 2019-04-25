@@ -39,16 +39,17 @@ header {
 }
 .introducion {
   background: url(../images/top-bg-shadow.jpg) no-repeat center;
+  background-size: contain;
   color: #f1f2f1;
   padding: 440px 0 270px;
 
   .welcome {
-    font: 108px/108px 'Signika', sans-serif;
+    font: 108px/1 'Signika', sans-serif;
     margin-bottom: 90px;
   }
 
   h4 {
-    font: 700 48px/48px 'Signika', sans-serif;
+    font: 700 48px/1 'Signika', sans-serif;
     margin-bottom: 20px;
   }
 
@@ -59,15 +60,12 @@ header {
       weight: 700;
     } 
     text-transform: uppercase;
-    
   }
 }
 
 .top-nav {
   background: $main-green;
   padding: 25px 0;
-
-  
 }
 
 .navigation {
@@ -141,7 +139,7 @@ section {
     font-family: "Signika", sans-serif;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 50px;;
+    margin-bottom: 50px;
   }
 } 
 .about,
@@ -157,7 +155,7 @@ section {
 
 .about-info {
   padding: 0 20px;
-  margin-bottom: 100px;;
+  margin-bottom: 100px;
 
 
   p {
@@ -479,6 +477,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   .inputs,
   .textarea {
@@ -562,6 +561,7 @@ input[type="submit"] {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .addresses {
   flex: 0 1 50%;
@@ -602,4 +602,235 @@ input[type="submit"] {
     max-width: 100%;
     height: auto;
   }
+}
+
+
+@media (max-width: 576px) {
+
+  %under-heading {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  %under-heading-dashed {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  body {
+    font-size: 11px;
+    line-height: 21px;
+  }
+  .introducion {
+    padding: 20px 0 30px;
+    background-size: cover;
+  
+    .welcome {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-weight: 400;
+    }
+  }
+
+  /* Content */
+
+  section {
+    .section-heading {
+      font-size: 24px;
+      margin-bottom: 40px;
+    
+      &::after {
+        top: 20px;
+      }
+    }
+    .under-heading-text {
+      margin-bottom: 30px;
+    }
+  } 
+  /* -- About-block --*/
+  .about {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  } 
+
+  .about-info {
+    padding: 0 10px;
+    margin-bottom: 50px;
+
+    p {
+      column-count: 1;
+    }
+  }
+
+  .our-team {
+    justify-content: center;
+
+    .member {
+      margin-bottom: 10px;
+    }
+  }
+
+  /* -- Portfolio -- */
+
+  .gallery {
+    padding-top: 30px;
+    
+    .portfolio-item {
+      flex: 0 1 100%;
+    }
+  }
+  .portfolio-item {
+    
+    .gallery-img {
+      width: 100%;
+    }
+    .category-wrap {
+      
+      .work-name,.work-category{
+        line-height: 20px;
+        text-transform: uppercase;
+      }
+      .work-name {
+        font: {
+          family: "Signika", sans-serif;
+          size: 18px;
+        }
+        
+      }
+      .work-category {
+        font-size: 14px;
+        
+      }
+    }
+
+  }
+
+  /* -- Services -- */
+  .services {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .our-advantages {
+    justify-content: center;
+
+    .advantage-item {
+      flex: 0 1 100%;
+      margin-bottom: 30px;
+  
+      .icon-container {
+        margin: 0 auto;
+      }
+      
+      .advantage-name {
+        font-size: 24px;
+      }
+      .description {
+        text-align: justify;
+      }
+      .read-more {
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* -- Blog -- */
+
+  .blog {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .posts-wrapper {
+    justify-content: center;
+
+    .post {
+      flex: 0 1 100%;
+      padding-bottom: 10px;
+      
+      img {
+        width: 100%;
+      }
+    }
+    .post-description {
+      h4 {
+        font-size: 21px;
+      }
+    }
+  }
+  
+
+  /* -- Contact -- */
+  .contact-us {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .input-fields {
+    justify-content: center;
+
+    .inputs,
+    .textarea {
+      flex: 0 1 100%;
+    }
+
+    input[type="text"] {
+      margin-bottom: 15px;
+    }
+    input[type="email"] {
+      margin-bottom: 15px;
+    }
+  }
+
+  .inputs input,
+  .textarea textarea {
+    padding: 10px;
+  }
+  input[type="submit"] {
+    margin: 15px auto 0;
+    font: {
+      size: 14px;
+      weight: 400;
+    }
+  }
+
+  /* Footer */
+  // .bottom-nav {
+  //   background: $secondary-green;
+  //   padding: 35px 0;
+  //   text-align: center;
+  //   font-size: 14px;
+
+  //   .navigation {
+  //     font-size: 14px;
+
+  //     li::after {
+  //       right: -7px;
+  //     }
+  //   }
+  // }
+  .main-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  .addresses {
+    flex: 0 1 100%;
+    
+    .address-item {
+      p {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+  .social {
+    flex: 0 1 100%;
+    margin-top: 10px;
+  }
+
 }
