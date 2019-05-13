@@ -30,7 +30,6 @@ header {
 
 .introducion {
   background: url(../images/top-bg-shadow.jpg) no-repeat center;
-  background-size: contain;
   color: #f1f2f1;
   padding: 440px 0 270px;
 }
@@ -474,6 +473,9 @@ section .under-heading-text {
       -ms-flex: 0 1 23%;
           flex: 0 1 23%;
   padding-bottom: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .posts-wrapper .post img {
@@ -482,31 +484,25 @@ section .under-heading-text {
   vertical-align: middle;
 }
 
-.posts-wrapper .post-description {
-  background: #fff;
-  padding: 30px;
-  height: 295px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /*????*/
-}
-
-.posts-wrapper .post-description .theme {
+.posts-wrapper .theme {
   font-size: 14px;
   line-height: 21px;
   color: #00a388;
+  padding: 30px 30px 0;
 }
 
-.posts-wrapper .post-description h4 {
+.posts-wrapper h4 {
   font-family: "Signika", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.25;
   margin: 15px 0;
+  padding: 0 30px;
 }
 
-.posts-wrapper .post-description .post-text {
+.posts-wrapper .post-text {
   line-height: 24px;
+  padding: 0 30px;
 }
 
 /* -- Map -- */
@@ -610,7 +606,6 @@ input[type="submit"] {
   background: #02c5a5;
   padding: 35px 0;
   text-align: center;
-  font-size: 14px;
 }
 
 .bottom-nav .navigation {
@@ -698,6 +693,15 @@ input[type="submit"] {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+}
+
+.social a:hover {
+  background: #00a388;
 }
 
 .social img {
@@ -719,7 +723,7 @@ input[type="submit"] {
     line-height: 21px;
   }
   .introducion {
-    padding: 20px 0 30px;
+    padding: 50px 0 30px;
     background-size: cover;
   }
   .introducion .welcome {
@@ -788,6 +792,9 @@ input[type="submit"] {
   .portfolio-item .category-wrap .work-category {
     font-size: 14px;
   }
+  .portfolio-item .category-wrap img {
+    width: 30px;
+  }
   /* -- Services -- */
   .services {
     padding-top: 50px;
@@ -803,9 +810,6 @@ input[type="submit"] {
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
     margin-bottom: 30px;
-  }
-  .our-advantages .advantage-item .icon-container {
-    margin: 0 auto;
   }
   .our-advantages .advantage-item .advantage-name {
     font-size: 24px;
@@ -835,7 +839,7 @@ input[type="submit"] {
   .posts-wrapper .post img {
     width: 100%;
   }
-  .posts-wrapper .post-description h4 {
+  .posts-wrapper h4 {
     font-size: 21px;
   }
   /* -- Contact -- */
@@ -890,6 +894,343 @@ input[type="submit"] {
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
     margin-top: 10px;
+  }
+  a {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  section .under-heading-text, .our-team .base-info .position {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .introducion p, .navigation, .our-team .base-info .name {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  body {
+    font-size: 13px;
+    line-height: 26px;
+  }
+  /* Header */
+  .introducion {
+    background-size: cover;
+    padding: 70px 0 50px;
+  }
+  .introducion .welcome {
+    font-size: 38px;
+    margin-bottom: 45px;
+  }
+  .introducion h4 {
+    font-size: 28px;
+  }
+  .navigation li {
+    padding: 0 15px;
+  }
+  .navigation li::after {
+    right: -5px;
+  }
+  /* Main Content */
+  section .section-heading {
+    font-size: 34px;
+    margin-bottom: 45px;
+  }
+  section .section-heading::after {
+    left: 47%;
+  }
+  section .under-heading-text {
+    margin-bottom: 35px;
+  }
+  /* -- About-block --*/
+  .about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .about-info {
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+  .about-info p {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+  .our-team {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .our-team .member {
+    margin-bottom: 10px;
+  }
+  .our-team .base-info .name {
+    margin-bottom: 10px;
+  }
+  /* -- Portfolio -- */
+  .gallery {
+    padding-top: 40px;
+  }
+  .gallery .portfolio-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+  .portfolio-item .category-wrap .work-name {
+    font-size: 18px;
+  }
+  .portfolio-item .category-wrap .work-category {
+    font-size: 14px;
+  }
+  .portfolio-item .category-wrap img {
+    width: 30px;
+  }
+  /* -- Sevices -- */
+  .services {
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+  .our-advantages .advantage-item {
+    margin-bottom: 30px;
+  }
+  .our-advantages .advantage-item .icon-container {
+    width: 100px;
+    height: 100px;
+  }
+  .our-advantages .advantage-item .advantage-name {
+    font-size: 21px;
+    margin: 15px 0;
+  }
+  .our-advantages .advantage-item .read-more {
+    font-size: 14px;
+  }
+  /* -- Blog -- */
+  .blog {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .posts-wrapper .post {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  .posts-wrapper .theme {
+    font-size: 13px;
+    padding: 15px 15px 0;
+  }
+  .posts-wrapper h4 {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+  .posts-wrapper .post-text {
+    padding: 0 15px;
+  }
+  /* -- Contact -- */
+  .contact-us {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .inputs input,
+  .textarea textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+  input[type="submit"] {
+    font-size: 13px;
+  }
+  /* Footer */
+  .bottom-nav {
+    padding: 25px 0;
+  }
+  .bottom-nav .navigation {
+    font-size: 13px;
+  }
+  .main-footer {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .addresses {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 55%;
+            flex: 0 1 55%;
+  }
+  .addresses .address-item p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .social a {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  section .under-heading-text, .our-team .base-info .position {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .introducion p, .navigation, .our-team .base-info .name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  /* Header */
+  .introducion {
+    background-size: cover;
+    padding: 160px 0 70px;
+  }
+  .introducion .welcome {
+    font-size: 68px;
+    margin-bottom: 70px;
+  }
+  .introducion h4 {
+    font-size: 36px;
+  }
+  section .section-heading {
+    font-size: 40px;
+  }
+  section .section-heading::after {
+    left: 47%;
+  }
+  /* -- About-block --*/
+  .about-info p {
+    -webkit-column-gap: 70px;
+            column-gap: 70px;
+  }
+  .our-team .member {
+    margin-bottom: 10px;
+  }
+  /* -- Portfolio -- */
+  .gallery {
+    padding-top: 60px;
+  }
+  .portfolio-item .category-wrap .work-name {
+    font-size: 21px;
+  }
+  .portfolio-item .category-wrap .work-category {
+    font-size: 16px;
+  }
+  .portfolio-item .category-wrap img {
+    width: 30px;
+  }
+  /* -- Sevices -- */
+  .services {
+    padding-bottom: 0px;
+  }
+  .our-advantages .advantage-item {
+    margin-bottom: 50px;
+  }
+  .our-advantages .advantage-item .icon-container {
+    width: 100px;
+    height: 100px;
+  }
+  .our-advantages .advantage-item .advantage-name {
+    font-size: 28px;
+  }
+  .our-advantages .advantage-item .read-more {
+    font-size: 16px;
+  }
+  /* -- Blog -- */
+  .blog {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .posts-wrapper .post {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 44%;
+            flex: 0 1 44%;
+  }
+  /* -- Contact -- */
+  .contact-us {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  /* Footer */
+  .main-footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .addresses {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 60%;
+            flex: 0 1 60%;
+  }
+  .addresses .address-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 29%;
+            flex: 0 1 29%;
+  }
+  .addresses .address-item p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .under-heading-text, .our-team .base-info .position {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .introducion p, .navigation, .our-team .base-info .name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  /* Header */
+  .introducion {
+    background-size: cover;
+    padding: 240px 0 170px;
+  }
+  /* -- About-block --*/
+  .about-info p {
+    -webkit-column-gap: 90px;
+            column-gap: 90px;
+  }
+  .our-team .member {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 23%;
+            flex: 0 1 23%;
+  }
+  .our-team .base-info .name::before {
+    left: -20px;
+  }
+  .our-team .base-info .name::after {
+    right: -20px;
+  }
+  .our-team .more-info {
+    padding: 10px;
+    text-align: center;
+  }
+  /* -- Portfolio -- */
+  .portfolio-item .category-wrap .work-name {
+    font-size: 24px;
+  }
+  .portfolio-item .category-wrap .work-category {
+    font-size: 16px;
+  }
+  /* -- Blog -- */
+  .blog {
+    padding-bottom: 150px;
+  }
+  .posts-wrapper .post {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 24%;
+            flex: 0 1 24%;
+  }
+  .posts-wrapper .theme {
+    padding: 30px 15px 0;
+  }
+  .posts-wrapper h4 {
+    font-size: 21px;
+    padding: 0 15px;
+  }
+  .posts-wrapper .post-text {
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1459px) {
+  .our-team .member {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 23%;
+            flex: 0 1 23%;
   }
 }
 /*# sourceMappingURL=style.css.map */
