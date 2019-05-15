@@ -55,6 +55,15 @@ header {
   padding: 25px 0;
 }
 
+.top-nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 15px 0;
+}
+
 .navigation {
   font-family: 'Signika', sans-serif;
 }
@@ -96,7 +105,7 @@ header {
   -o-transition: .3s ease-in-out;
 }
 
-.navigation a:hover {
+.navigation a.current, .navigation a:hover {
   color: #ffcf5c;
 }
 
@@ -177,6 +186,26 @@ section .under-heading-text {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 270px;
           flex: 0 1 270px;
+  opacity: 0;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+}
+
+.our-team .member.showing {
+  opacity: 1;
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
 }
 
 .our-team .member:hover .base-info,
@@ -500,13 +529,26 @@ section .under-heading-text {
   margin-bottom: 30px;
   overflow: hidden;
   background-color: #fff;
-  -webkit-transition: -webkit-transform .4s ease;
-  transition: -webkit-transform .4s ease;
-  transition: transform .4s ease;
-  -webkit-transition: transform .4s ease;
-  -moz-transition: transform .4s ease;
-  -ms-transition: transform .4s ease;
-  -o-transition: transform .4s ease;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  -o-transform: translateX(20px);
+  opacity: 0;
+}
+
+.posts-wrapper .post.active {
+  opacity: 1;
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
 }
 
 .posts-wrapper .post:hover {
@@ -811,12 +853,12 @@ input[type="submit"] {
 
 @media (max-width: 576px) {
   section .under-heading-text, .our-team .base-info .position {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 18px;
   }
   .introducion p, .navigation, .our-team .base-info .name {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 16px;
   }
   body {
     font-size: 11px;
@@ -836,6 +878,19 @@ input[type="submit"] {
   }
   .introducion p {
     font-weight: 400;
+  }
+  /* Navigation */
+  .top-nav {
+    padding: 15px 0;
+  }
+  .top-nav.fixed {
+    padding: 10px 0;
+  }
+  .navigation li {
+    padding: 0 10px;
+  }
+  .navigation li::after {
+    right: -5px;
   }
   /* Content */
   section .section-heading {
@@ -985,6 +1040,15 @@ input[type="submit"] {
     font-weight: 400;
   }
   /* Footer */
+  .bottom-nav {
+    padding: 15px 0;
+  }
+  .bottom-nav .navigation {
+    font-size: 11px;
+  }
+  .bottom-nav .navigation li::after {
+    right: -5px;
+  }
   .main-footer {
     padding-top: 50px;
     padding-bottom: 50px;

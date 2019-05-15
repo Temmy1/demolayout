@@ -66,6 +66,15 @@ header {
 .top-nav {
   background: $main-green;
   padding: 25px 0;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 15px 0;
+  }
 }
 
 .navigation {
@@ -100,6 +109,7 @@ header {
     color: #f1f2f1;
     @include link-transition();
 
+    &.current,
     &:hover {
       color: #ffcf5c;
     }
@@ -176,6 +186,22 @@ section {
 
   .member {
     flex: 0 1 270px;
+    opacity: 0;
+    @include link-transition();
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+
+    &.showing {
+      opacity: 1;
+      transform: translateY(0px);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
+    }
     
 
     &:hover {
@@ -435,18 +461,32 @@ section {
     margin-bottom: 30px;
     overflow: hidden;
     background-color: #fff;
-    transition: transform .4s ease;
-    -webkit-transition: transform .4s ease;
-    -moz-transition: transform .4s ease;
-    -ms-transition: transform .4s ease;
-    -o-transition: transform .4s ease;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transform: translateX(20px);
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    opacity: 0;
+    &.active {
+      opacity: 1;
+      transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+      -o-transform: translateX(0px);
+    }
     &:hover {
         transform: scale(1.05);
         -webkit-transform: scale(1.05);
         -moz-transform: scale(1.05);
         -ms-transform: scale(1.05);
         -o-transform: scale(1.05);
-      }
+    }
 
     img {
       max-width: 100%;
@@ -679,12 +719,12 @@ input[type="submit"] {
 @media (max-width: 576px) {
 
   %under-heading {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 18px;
   }
   %under-heading-dashed {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 16px;
   }
   body {
     font-size: 11px;
@@ -708,6 +748,28 @@ input[type="submit"] {
       font-weight: 400;
     }
   }
+
+  /* Navigation */
+  .top-nav {
+    padding: 15px 0;
+    &.fixed {
+      padding: 10px 0;
+    }
+  }
+  
+  .navigation {
+  
+    li {
+      padding: 0 10px;
+     
+      &::after {
+        right: -5px;
+      }
+      
+    }
+    
+  }
+  
 
   /* Content */
 
@@ -886,6 +948,17 @@ input[type="submit"] {
   }
 
   /* Footer */
+  .bottom-nav {
+    padding: 15px 0;
+    
+    .navigation {
+      font-size: 11px;
+  
+      li::after {
+        right: -5px;
+      }
+    }
+  }
   .main-footer {
     padding-top: 50px;
     padding-bottom: 50px;
